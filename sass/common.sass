@@ -1,0 +1,311 @@
+@import compass/css3
+@import carousel
+// @import form
+@import url('https://fonts.googleapis.com/css?family=Rubik:400,500')
+
+
+$blue: #2caadf
+$navy: #2b3348
+$black: #000
+$gray: #9ea3a4
+$red: #f22f27
+
+$primary: $blue !default
+$primary-md: darken($primary, 10%) !default
+$secondary: $red
+$secondary-md: darken($secondary, 10%) !default
+
+
+// -------------------------- COMMON --------------------------------------------------
+
+// extendables
+.uppercase
+  text-transform: uppercase
+  letter-spacing: 1px
+
+// common
+body
+  font-family: "Rubik", Helvetica, Arial, sans-serif
+  background: white
+  color: #444
+  font-size: 14px
+
+p, ul, li
+  color: #666
+  line-height: 1.5em
+
+img
+  max-width: 100%
+
+li
+  line-height: 1.5em
+
+a
+  color: $primary
+  cursor: pointer
+  &:hover
+    color: $primary-md
+    text-decoration: none
+
+h1, h2, h3
+  font-weight: 500
+
+h1
+  font-size: 36px
+  font-weight: normal
+  margin-bottom: 10px
+
+h2
+  font-size: 28px
+  margin-bottom: 10px
+
+h3
+  font-size: 21px
+  margin-bottom: 10px
+
+h4
+  font-size: 16px
+  font-weight: bold
+
+select, input[type="text"]
+  border: 1px solid #ccc
+  border-radius: 3px
+  padding: 5px 10px
+  box-sizing: border-box
+  font-family: "Rubik", Helvetica, Arial, sans-serif
+  font-size: 16px
+  color: #333
+
+.left
+  float: left
+
+.container
+  width: 100%
+  max-width: 100%
+  padding: 0
+
+.row-inset
+  max-width: 900px
+  margin: auto
+  padding: 0 15px
+
+.content
+  > div
+    margin-bottom: 40px
+    clear: both
+    &:after
+      content: ""
+      clear: both
+      display: block
+
+select:-moz-focusring
+  outline: none
+  color: transparent
+  text-shadow: 0 0 0 #000
+
+// header
+.header
+  background: white
+  color: white
+  padding-top: 15px
+  padding-bottom: 15px
+  text-align: center
+  overflow: hidden
+  .header-brand a
+    background-image: url('../images/my-auto-insurance-savings-logo-wide.png')
+    background-repeat: no-repeat
+    display: block
+    float: left
+    margin: auto
+    width: 386px
+    height: 50px
+    text-indent: -9999px
+    margin-right: 10px
+
+// form
+.form-banner
+  position: relative
+  min-height: 400px
+  > div
+  h1
+    color: white
+    font-weight: 500
+    margin: 0 0 10px
+    font-size: 48px
+
+.form-div
+  max-width: 600px
+  margin: auto
+  input, select, .btn
+    display: block
+    width: 60%
+    margin: 0 auto 15px
+  &.joined-button
+    input, .btn
+      display: inline
+      margin: 0
+      height: 46px
+      box-sizing: border-box
+    input
+      width: 40% !important
+      border-radius: 5px 0 0 5px
+    .btn
+      width: auto
+      border-radius: 0 5px 5px 0
+      position: relative
+      left: -5px
+      top: -1px
+
+.zip-form
+  text-align: center
+  p
+    color: white
+    font-size: 21px
+    margin: 0
+
+.btn, .btn-primary
+  font-weight: normal
+  text-transform: uppercase
+  letter-spacing: 1px
+  color: white
+  font-size: 16px !important
+  padding: 12px 30px !important
+  background: $secondary !important
+  border: none !important
+  border-radius: 5px
+  white-space: normal
+  cursor: pointer
+  text-shadow: rgba(255,255,255,0.2) 0 1px 0
+  &:hover
+    color: white
+    background: $secondary-md !important
+    text-shadow: rgba(255,255,255,0.6) 0 1px 0
+    top: 1px
+    position: relative
+
+.form-container
+  background: white
+  box-shadow: 2px 2px 2px rgba(0,0,0,0.2)
+  border-radius: 5px
+  .form-header
+    text-align: center
+    background: $primary
+    padding: 15px 10px
+    border-radius: 5px 5px 0 0
+    h2
+      color: white
+      font-weight: normal
+      font-size: 20px
+      margin: 0
+  .form-body
+    padding: 20px 30px
+  .form-footer
+    text-align: center
+    margin: 20px 0
+
+.body
+  background: $navy
+  padding-bottom: 40px
+  h2, h3, p, ul, li
+    color: white
+  .row
+    padding: 20px 0
+  .insurance-logos
+    img
+      margin-bottom: 40px
+
+.card
+  background: white
+  border-radius: 5px
+  padding: 20px 10px
+  box-shadow: 2px 2px 2px rgba(0,0,0,0.15)
+  text-align: center
+  margin-bottom: 10px
+  position: relative
+  transition: all 0.2s
+  &.card-blue
+    background: $primary
+  img
+    margin: 10px
+  a:hover
+    text-decoration: none !important
+  &:hover
+    position: relative
+    top: 1px
+    -webkit-transform: scale(1.05)
+    -ms-transform: scale(1.05)
+    transform: scale(1.05)
+
+.footer
+  background: #e3e3e3
+  clear: both
+  overflow: auto
+  padding: 30px 0
+  text-align: center
+  p
+    color: #999
+    text-align: center
+
+// privacy and terms
+
+#privacy
+  h1
+    font-size: 30px
+    color: $primary
+    text-shadow: none
+    font-weight: 500
+  h2
+    font-size: 20px
+    color: $primary
+    font-weight: 500
+    border-bottom: 3px solid $primary
+    padding-bottom: 10px
+    margin: 20px 0 10px
+    text-align: left
+
+//////////////////////////////////////  MEDIA QUERIES  ///////////////////////////////////////
+
+@media (max-width: 1200px)
+  .container
+    max-width: 100%
+
+//bootstrap breakpoint
+
+@media (min-width: 992px)
+
+// Responsive: Landscape phone to desktop/tablet
+
+@media (min-width: 769px)
+
+@media (max-width: 768px)
+  .header .header-brand a
+    max-width: 320px
+    margin: auto
+    float: none
+    background-size: contain
+  .row-inset
+    padding: 0 20px
+  .form-div.joined-button input
+    width: 100% !important
+    text-align: center
+    max-width: 300px
+    margin: 0 auto 10px
+  .card-blue
+    max-width: 300px
+    margin: 0 auto 20px
+
+// UP TO LANDSCAPE PHONE
+// ---------------------
+@media (max-width: 480px)
+
+  .form-banner
+    background-size: contain
+    h1
+      font-size: 28px
+
+  // privacy
+  #privacy
+    h1
+      font-size: 28px
+    h2
+      font-size: 18px
